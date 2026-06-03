@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Lego.Api/Lego.Api.csproj" />
+  <Project Path="Lego.Core/Lego.Core.csproj" />
+  <Project Path="Lego.Mcp.StdIo/Lego.Mcp.StdIo.csproj" />
+  <Project Path="Lego.Mcp.Stream/Lego.Mcp.Stream.csproj" />
+</Solution>

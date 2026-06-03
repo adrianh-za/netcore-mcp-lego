@@ -1,0 +1,36 @@
+# Created by https://www.toptal.com/developers/gitignore/api/rider,jetbrains,dotnetcore
+# Edit at https://www.toptal.com/developers/gitignore?templates=rider,jetbrains,dotnetcore
+
+### DotnetCore ###
+# .NET Core build folders
+bin/
+obj/
+
+# NuGet packages
+packages/
+*.nupkg
+
+# Common node modules locations
+/node_modules
+/wwwroot/node_modules
+
+### IDEs ###
+.vs/
+.idea/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+### AI ###
+.claude/
+.junie/
+
+### Build results ###
+*.dll
+*.exe
+*.pdb
+*.deps.json
+*.runtimeconfig.json
+*.staticwebassets.endpoints.json
