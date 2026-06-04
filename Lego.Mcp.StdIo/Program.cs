@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
  *
  * Now you can run
  *
- * npx @modelcontextprotocol/inspector dotnet run --project Lego.Mcp.StdIo/Lego.Mcp.StdIo.csproj
+ * npx @modelcontextprotocol/inspector dotnet run --project Lego.Mcp.StdIo
  *
  * from the repo root and the MCP server will find the config/data files without needing to cd into the Lego.Mcp.StdIo folder first.
  */

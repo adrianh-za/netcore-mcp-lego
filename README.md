@@ -77,7 +77,7 @@ curl "http://localhost:5000/api/lego/themes/15/sets"
 
 #### Running
 ```bash
-dotnet run --project Lego.Api/Lego.Api.csproj
+dotnet run --project Lego.Api
 ```
 
 Swagger UI is available at `http://localhost:<port>/swagger` when running in development.
@@ -89,14 +89,20 @@ An MCP server using stdio transport. This allows direct process-to-process commu
 #### Running with MCP Inspector
 ```bash
 # From solution root
-npx @modelcontextprotocol/inspector dotnet run --project Lego.Mcp.StdIo/Lego.Mcp.StdIo.csproj
+npx @modelcontextprotocol/inspector dotnet run --project Lego.Mcp.StdIo
 ```
 
 This launches the MCP inspector and automatically connects to the stdio server.
 
+In the MCP Inspector:
+* Transport Type: `STDIO`
+* Command: `dotnet`
+* Arguments: `run --project Lego.Mcp.StdIo`
+* Authentication: No custom headers or tokens required.
+
 #### Running Standalone
 ```bash
-dotnet run --project Lego.Mcp.StdIo/Lego.Mcp.StdIo.csproj
+dotnet run --project Lego.Mcp.StdIo
 ```
 
 The server reads from stdin and writes to stdout, making it compatible with any MCP client that supports stdio transport.
@@ -107,7 +113,7 @@ An MCP server using HTTP transport. This runs as a web application and exposes M
 
 #### Running
 ```bash
-dotnet run --project Lego.Mcp.Stream/Lego.Mcp.Stream.csproj
+dotnet run --project Lego.Mcp.Stream
 ```
 
 The server starts on port `5250` by default.
@@ -117,7 +123,12 @@ The server starts on port `5250` by default.
 npx @modelcontextprotocol/inspector
 ```
 
-In the inspector, enter the server URL: `http://localhost:5250/mcp`
+In the MCP Inspector:
+* Transport Type: `Streamable HTTP`
+* URL: `http://localhost:5250/mcp`
+* Connection Type: `Via Proxy`
+* Authentication: No custom headers or tokens required.
+
 
 #### Configuration
 The port can be configured in `Lego.Mcp.Stream/appsettings.json`:
