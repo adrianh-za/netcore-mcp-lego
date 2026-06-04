@@ -10,11 +10,16 @@ using Microsoft.Extensions.DependencyInjection;
  *
  * Now you can run
  *
- * npx @modelcontextprotocol/inspector dotnet run --project Lego.Mcp.StdIo/Lego.Mcp.StdIo.csproj
+ * First terminal: dotnet run --project Lego.Mcp.Stream
+ * Second terminl: npx @modelcontextprotocol/inspector
  *
- * from the repo root and the MCP server will find the config/data files without needing to cd into the Lego.Mcp.StdIo folder first.
+ * from the repo root and the MCP server will find the config/data files without needing to cd into the Lego.Mcp.Stream folder first.
  */
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    Args = args,
+    ContentRootPath = AppContext.BaseDirectory
+});
 
 //Wire up the MCP server and tools
 builder.Services.AddLego(builder.Configuration);
